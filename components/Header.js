@@ -28,13 +28,13 @@ export default function Header() {
                   <UilUserCircle size={50} className="text-white" />
                 </div>
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                  <p
-                    href="/contact"
+                  <a
+                    href="/"
                     className="bg-gray-900 text-white
  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Contact List
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-center">
@@ -43,7 +43,9 @@ export default function Header() {
                     type="button"
                     className="relative inline-flex items-center rounded-md border border-transparent bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
-                    <span>Total Contact : {itemData.length}</span>
+                    <span>
+                      Total Contact : {itemData != null ? itemData.length : ""}
+                    </span>
                   </button>
                 </div>
                 <div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center"></div>

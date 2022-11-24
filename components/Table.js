@@ -33,6 +33,18 @@ const Table = () => {
       localStorage.setItem("contacts", JSON.stringify(deleted));
     }
   };
+
+  itemData &&
+    itemData.sort(function (a, b) {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-10 shadow-lg m-5 border border-gray-200">
       <div className="sm:flex sm:items-center sm:justify-center">

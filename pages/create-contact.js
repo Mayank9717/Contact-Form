@@ -22,7 +22,7 @@ export default function CreateContact() {
     localStorage.setItem("contacts", JSON.stringify(items));
   }, [items]);
   const onSubmit = (e) => {
-    if (name === "" || email === "" || phone === "" || type === "") {
+    if (name === "" || email === "" || phone === "") {
       alert("Please fill all the fields");
     } else {
       e.preventDefault();
@@ -128,7 +128,6 @@ export default function CreateContact() {
                   <select
                     id="type"
                     name="type"
-                    required
                     onChange={(e) => SetType(e.target.value)}
                     autoComplete="country-name"
                     className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm bg-white focus:outline-none  sm:text-sm"
