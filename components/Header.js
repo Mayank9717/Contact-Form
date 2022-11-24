@@ -1,5 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { UilUserCircle } from "@iconscout/react-unicons";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function classNames(...classes) {
@@ -28,13 +29,14 @@ export default function Header() {
                   <UilUserCircle size={50} className="text-white" />
                 </div>
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                  <a
-                    href="/"
-                    className="bg-gray-900 text-white
+                  <Link href={"/"}>
+                    <span
+                      className="bg-gray-900 text-white
  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Contact List
-                  </a>
+                    >
+                      Contact List
+                    </span>
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center">
