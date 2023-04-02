@@ -176,5 +176,6 @@ const Table = () => {
     </div>
   );
 };
+// new
 
 export default Table;
